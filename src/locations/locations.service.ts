@@ -12,7 +12,7 @@ export class LocationsService {
     });
   }
 
-  getLocation(bookID): Promise<LocationDTO> {
+  getLocation(bookID: number): Promise<LocationDTO> {
     const id = Number(bookID);
     return new Promise(resolve => {
       const location = this.locations.find(
@@ -25,7 +25,7 @@ export class LocationsService {
     });
   }
 
-  addLocation(location): Promise<LocationDTO[]> {
+  addLocation(location: LocationDTO): Promise<LocationDTO[]> {
     return new Promise(resolve => {
       this.locations.push(location);
       resolve(this.locations);

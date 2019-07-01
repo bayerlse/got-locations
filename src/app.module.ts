@@ -8,7 +8,7 @@ import { LocationsModule } from './locations/locations.module';
   imports: [
     LocationsModule,
     GraphQLModule.forRoot({
-      autoSchemaFile: './gql/schema.gql',
+      autoSchemaFile: `${__dirname}/gql/schema.gql`,
     }),
   ],
   controllers: [AppController],

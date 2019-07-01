@@ -9,7 +9,7 @@ export class LocationsResolver {
 
   @Query(returns => Location)
   async location(@Args('id') id: string): Promise<Location> {
-    const recipe = await this.locationsService.getLocation(id);
+    const recipe = await this.locationsService.getLocation(Number(id));
     if (!recipe) {
       throw new NotFoundException(id);
     }
