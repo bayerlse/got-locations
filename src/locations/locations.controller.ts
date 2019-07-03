@@ -13,8 +13,8 @@ export class LocationsController {
   }
 
   @Get(':locationId')
-  async location(@Param('locationId') locationId) {
-    const location = await this.locationsService.getLocation(locationId);
+  async location(@Param('locationId') locationId: string) {
+    const location = await this.locationsService.getLocation(Number(locationId));
     return location;
   }
 

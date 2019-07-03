@@ -12,8 +12,8 @@ export class LocationsService {
     });
   }
 
-  getLocation(bookID): Promise<LocationDTO> {
-    const id = Number(bookID);
+  getLocation(locationId: number): Promise<LocationDTO> {
+    const id = Number(locationId);
     return new Promise(resolve => {
       const location = this.locations.find(
         currLocation => currLocation.id === id,
